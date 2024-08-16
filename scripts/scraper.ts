@@ -84,7 +84,7 @@ const getEssay = async (url: string, title: string) => {
 	return essay;
 };
 
-const getChunks = async (essay: PGEssay) => {
+const getChunks = async (essay: PGEssay): Promise<PGEssay> => {
 	const {title, url, date, content, tokens} = essay;
 
 	const essayTextChunks: string[] = [];
